@@ -116,7 +116,9 @@ address {
 }
 
 .header-list .header-contact {
-  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-link,
@@ -142,7 +144,7 @@ address {
 }
 
 .header-contact-icon {
-  gap: 10px;
+  fill: currentColor;
 }
 
 .header-link {
@@ -232,17 +234,24 @@ address {
 .icon-clock,
 .icon-diagram,
 .icon-astronaut {
-  display: block;
-  content: "";
-  width: 270px;
-  height: 120px;
+  width: 70px;
+  height: 70px;
+}
 
+.icon-svg {
+  /* display: block;
+  content: "";
+  width: 270px; */
+  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .work-title {
@@ -333,23 +342,23 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #afb1b8;
+  color: #afb1b8;
 }
 
 .team-soc-icon {
-  /* fill: currentColor; */
+  fill: currentColor;
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus {
   background-color: var(--accent-color);
-  fill: var(--main-color);
+  color: var(--main-color);
 }
 
 .team-soc-link:hover,
 .team-soc-icon,
 .team-soc-link:focus .team-soc-icon {
-  color: var(--main-color);
+  fill: currentColor;
 }
 
 /* CLIENTS */
@@ -364,21 +373,21 @@ address {
 }
 
 .clients-item {
-  /* box-sizing: border-box; */
   width: 170px;
   height: 92px;
+}
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  color: #afb1b8;
 }
 .clients-icon {
-  display: block;
-  content: "";
-  width: 170px;
-  height: 92px;
-  fill: #afb1b8;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: currentColor;
 }
 
 .clients-icon:hover,
@@ -483,11 +492,19 @@ address {
   padding-bottom: 60px;
 }
 
-/* .container-info,
-.container-join {
+.container-info {
   display: flex;
+}
+
+.info,
+.join {
+  display: block;
   align-items: center;
-} */
+  justify-content: start;
+}
+.info {
+  margin-right: 70px;
+}
 
 .footer-logo {
   font-family: var(--main-font);
@@ -532,17 +549,14 @@ address {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.join {
-  display: flex;
-  justify-content: center;
-}
-
 .footer-join {
+  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   /* justify-content: center; */
   color: var(--main-color);
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 
